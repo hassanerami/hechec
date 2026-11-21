@@ -1,0 +1,22 @@
+HEC ENSH - site
+
+STRUCTURE
+  index.html            page unique (toutes les sections)
+  css/style.css         styles
+  js/app.js             donnees + logique (traductions FR/AR, equipe, activites, galerie, sponsors, liens sociaux)
+  images/
+    logo.png, banniere-hero.jpg, ensh-campus.jpg
+    fonds/              fond-apropos.jpg, fond-activites.jpg, fond-galerie.jpg, fond-equipe.jpg, fond-contact.jpg  (~1600px)
+    equipe/             membre1.jpg ... membre7.jpg                                                              (~400px)
+    activites/<nom>/    ex. open-day/activite1_1.jpg ...                                                         (~1280px)
+    galerie/<nom>/      ex. open-day/galerie1_1.jpg ...                                                          (~1280px)
+    sponsors/           sponsor1.jpg
+
+AJOUTER UNE ACTIVITE : creer images/activites/<nom>/, y mettre les photos, puis ajouter une ligne dans "activities" (js/app.js).
+  -> pour l'arabe, ajouter la meme activite (meme id) dans ACT_AR.
+AJOUTER UN ALBUM GALERIE : creer images/galerie/<nom>/ puis ajouter une ligne dans "galleryItems" (modele en commentaire).
+  -> pour l'arabe, ajouter le titre dans GAL_AR.
+EQUIPE : modifier "teamMembers" ; le poste en arabe se met dans TEAM_AR (meme id).
+RESEAUX SOCIAUX / TELEPHONE : SOCIAL_LINKS et CONTACT_PHONE au debut de la partie "donnees" de js/app.js.
+SPONSORS : liste "sponsors" dans js/app.js, logos dans images/sponsors/.
+IMAGES : toujours compresser avant d'ajouter (jamais plusieurs milliers de pixels).
